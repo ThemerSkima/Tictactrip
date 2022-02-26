@@ -7,6 +7,10 @@ const port = process.env.PORT || API_PORT;
 
 
 // server listening
+if (require.main === module) {
+
 server.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
+}
+module.exports = server;
